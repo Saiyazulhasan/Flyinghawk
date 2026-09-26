@@ -1,12 +1,410 @@
-.activity-item {
-  display: flex;
-  gap: 20px;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 12px;
+/* ========================================
+   ACTIVITY LOG PAGE — SOFT UI
+======================================== */
+
+.activity-page {
+  width: 100%;
 }
 
-.activity-item span {
-  color: #888;
-  width: 60px;
+
+/* HEADER */
+
+.activity-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.activity-page-header h1 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  color: #252622;
+}
+
+.activity-page-header p {
+  margin: 5px 0 0;
+
+  font-size: 10px;
+
+  color: #77776f;
+}
+
+.activity-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none;
+
+  background: #e8e9e3;
+
+  color: #4f5049;
+
+  padding: 9px 12px;
+
+  border-radius: 9px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    4px 4px 8px rgba(163,165,158,.3),
+    -4px -4px 8px rgba(255,255,255,.82);
+
+  transition: .2s ease;
+}
+
+.activity-filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+.activity-filter-btn:active {
+  transform: translateY(1px);
+
+  box-shadow:
+    inset 3px 3px 6px rgba(163,165,158,.23),
+    inset -3px -3px 6px rgba(255,255,255,.78);
+}
+
+
+/* SUMMARY */
+
+.activity-summary-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0,1fr));
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+}
+
+.activity-summary-card {
+  min-height: 88px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border-radius: 13px;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    6px 6px 12px rgba(163,165,158,.35),
+    -6px -6px 12px rgba(255,255,255,.88);
+}
+
+.activity-summary-icon {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    3px 3px 6px rgba(163,165,158,.25),
+    -3px -3px 6px rgba(255,255,255,.8);
+}
+
+.activity-summary-icon.total {
+  background: #e7efff;
+  color: #4d6fd6;
+}
+
+.activity-summary-icon.danger {
+  background: #ffe7e3;
+  color: #d34a43;
+}
+
+.activity-summary-icon.worker {
+  background: #e8efff;
+  color: #4164a7;
+}
+
+.activity-summary-icon.system {
+  background: #e5f5e7;
+  color: #3d9147;
+}
+
+.activity-summary-card span {
+  display: block;
+
+  font-size: 8px;
+
+  color: #85857d;
+
+  margin-bottom: 4px;
+}
+
+.activity-summary-card strong {
+  display: block;
+
+  font-size: 20px;
+
+  color: #292a26;
+}
+
+
+/* MAIN PANEL */
+
+.activity-page-panel {
+  background: #e8e9e3;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  box-shadow:
+    6px 6px 12px rgba(163,165,158,.35),
+    -6px -6px 12px rgba(255,255,255,.88);
+}
+
+.activity-page-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid rgba(190,192,185,.35);
+}
+
+.activity-page-panel-header h2 {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  color: #292a26;
+}
+
+.activity-page-panel-header p {
+  margin: 4px 0 0;
+
+  font-size: 8px;
+
+  color: #85857d;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  background: #e4f5df;
+
+  color: #32803a;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  box-shadow:
+    3px 3px 6px rgba(163,165,158,.23),
+    -3px -3px 6px rgba(255,255,255,.75);
+}
+
+.live-indicator span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #35a83c;
+
+  box-shadow:
+    0 0 0 3px rgba(53,168,60,.12),
+    0 0 6px rgba(53,168,60,.3);
+}
+
+
+/* TIMELINE */
+
+.activity-timeline {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.activity-page-row {
+  display: flex;
+
+  gap: 11px;
+
+  padding: 13px 4px;
+
+  border-bottom: 1px solid rgba(190,192,185,.32);
+
+  transition: .2s ease;
+}
+
+.activity-page-row:last-child {
+  border-bottom: none;
+}
+
+.activity-page-row:hover {
+  padding-left: 8px;
+
+  border-radius: 9px;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    3px 3px 7px rgba(163,165,158,.2),
+    -3px -3px 7px rgba(255,255,255,.65);
+}
+
+
+/* EVENT ICON */
+
+.activity-page-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    3px 3px 6px rgba(163,165,158,.25),
+    -3px -3px 6px rgba(255,255,255,.78);
+}
+
+.activity-page-icon.danger {
+  background: #ffe5e1;
+  color: #d33b31;
+}
+
+.activity-page-icon.success {
+  background: #e4f5df;
+  color: #32803a;
+}
+
+.activity-page-icon.worker {
+  background: #e8efff;
+  color: #4164a7;
+}
+
+.activity-page-icon.sensor {
+  background: #fff4ca;
+  color: #aa7e00;
+}
+
+.activity-page-icon.normal {
+  background: #eeeeE7;
+  color: #5d5e57;
+}
+
+.activity-page-icon.warning {
+  background: #fff0d4;
+  color: #ad7900;
+}
+
+
+/* CONTENT */
+
+.activity-page-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.activity-page-main {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.activity-page-main strong {
+  font-size: 10px;
+
+  color: #30312d;
+}
+
+.activity-page-main span {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+
+  font-size: 8px;
+
+  color: #8a8a82;
+}
+
+.activity-page-content p {
+  margin: 5px 0 4px;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+
+  color: #77776f;
+}
+
+.activity-page-content small {
+  display: inline-block;
+
+  padding: 4px 6px;
+
+  border-radius: 6px;
+
+  background: #e8e9e3;
+
+  color: #777871;
+
+  font-size: 7px;
+
+  box-shadow:
+    inset 2px 2px 4px rgba(163,165,158,.16),
+    inset -2px -2px 4px rgba(255,255,255,.65);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .activity-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .activity-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }

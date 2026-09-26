@@ -1,9 +1,13 @@
+/* ========================================
+   TOPBAR — NEUMORPHIC SOFT UI
+======================================== */
+
 .topbar {
   height: 62px;
 
-  background: #fafaf5;
+  background: #e8e9e3;
 
-  border-bottom: 1px solid #deded2;
+  border-bottom: none;
 
   display: flex;
   align-items: center;
@@ -12,6 +16,10 @@
   padding: 0 18px;
 
   box-sizing: border-box;
+
+  box-shadow:
+    0 5px 12px rgba(163, 165, 158, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .topbar-left,
@@ -22,6 +30,11 @@
   gap: 12px;
 }
 
+
+/* ========================================
+   SELECTORS
+======================================== */
+
 .selector {
   height: 36px;
 
@@ -29,10 +42,11 @@
 
   padding: 0 11px;
 
-  border: 1px solid #dcdcd0;
-  border-radius: 7px;
+  border: none;
 
-  background: #fffef8;
+  border-radius: 10px;
+
+  background: #e8e9e3;
 
   display: flex;
   align-items: center;
@@ -41,23 +55,64 @@
 
   font-size: 11px;
   font-weight: 600;
+
+  color: #30322d;
+
+  box-shadow:
+    4px 4px 8px rgba(163, 165, 158, 0.32),
+    -4px -4px 8px rgba(255, 255, 255, 0.82);
+
+  transition: 0.2s ease;
+}
+
+.selector:hover {
+  box-shadow:
+    2px 2px 5px rgba(163, 165, 158, 0.3),
+    -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.selector:active {
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 165, 158, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
 .panel-selector {
   min-width: 135px;
 }
 
+
+/* ========================================
+   DATE / TIME
+======================================== */
+
 .datetime {
   font-size: 10px;
+
   color: #55564f;
+
+  padding: 7px 9px;
+
+  border-radius: 8px;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    inset 2px 2px 4px rgba(163, 165, 158, 0.18),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.65);
 }
+
+
+/* ========================================
+   ONLINE STATUS
+======================================== */
 
 .online-status {
   height: 30px;
 
   padding: 0 11px;
 
-  border-radius: 7px;
+  border-radius: 9px;
 
   background: #e4f5df;
 
@@ -70,6 +125,10 @@
 
   font-size: 10px;
   font-weight: 700;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.25),
+    -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
 .online-dot {
@@ -79,14 +138,56 @@
   border-radius: 50%;
 
   background: #32a53c;
+
+  box-shadow:
+    0 0 0 3px rgba(50, 165, 60, 0.12),
+    0 0 6px rgba(50, 165, 60, 0.35);
 }
+
+
+/* ========================================
+   NOTIFICATION
+======================================== */
 
 .notification {
   position: relative;
 
-  padding: 5px;
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #e8e9e3;
 
   color: #30322d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    4px 4px 8px rgba(163, 165, 158, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.82);
+
+  transition: 0.2s ease;
+}
+
+.notification:hover {
+  transform: translateY(-1px);
+}
+
+.notification:active {
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 165, 158, 0.28),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+
+  transform: translateY(1px);
 }
 
 .notification span {
@@ -108,19 +209,39 @@
 
   font-size: 8px;
   font-weight: 800;
+
+  box-shadow:
+    2px 2px 4px rgba(163, 165, 158, 0.3);
 }
+
+
+/* ========================================
+   ADMIN PROFILE
+======================================== */
 
 .admin-profile {
   display: flex;
   align-items: center;
 
   gap: 7px;
+
+  padding: 6px 9px;
+
+  border-radius: 10px;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    4px 4px 8px rgba(163, 165, 158, 0.28),
+    -4px -4px 8px rgba(255, 255, 255, 0.78);
 }
 
 .admin-profile strong {
   display: block;
 
   font-size: 11px;
+
+  color: #252622;
 }
 
 .admin-profile small {

@@ -1,22 +1,31 @@
+/* ========================================
+   KPI GRID — SOFT UI
+======================================== */
+
 .kpi-grid {
   display: grid;
 
   grid-template-columns:
     repeat(6, minmax(0, 1fr));
 
-  gap: 10px;
+  gap: 12px;
 
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
+
+
+/* ========================================
+   KPI CARD
+======================================== */
 
 .kpi-card {
   min-height: 105px;
 
-  background: #fffef8;
+  background: #e8e9e3;
 
-  border: 1px solid #deded2;
+  border: none;
 
-  border-radius: 10px;
+  border-radius: 14px;
 
   padding: 13px;
 
@@ -27,14 +36,27 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+
+  box-shadow:
+    6px 6px 12px rgba(163, 165, 158, 0.38),
+    -6px -6px 12px rgba(255, 255, 255, 0.88);
 }
+
+
+/* Hover */
 
 .kpi-card:hover {
   transform: translateY(-2px);
 
   box-shadow:
-    0 5px 16px rgba(0, 0, 0, 0.06);
+    8px 8px 15px rgba(163, 165, 158, 0.42),
+    -8px -8px 15px rgba(255, 255, 255, 0.92);
 }
+
+
+/* ========================================
+   KPI TOP
+======================================== */
 
 .kpi-top {
   display: flex;
@@ -54,13 +76,18 @@
   font-weight: 600;
 }
 
+
+/* ========================================
+   KPI ICON
+======================================== */
+
 .kpi-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 
-  border-radius: 7px;
+  border-radius: 9px;
 
-  background: #f1f1e9;
+  background: #e8e9e3;
 
   display: flex;
 
@@ -68,7 +95,16 @@
   justify-content: center;
 
   color: #44453f;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.32),
+    -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
+
+
+/* ========================================
+   KPI VALUE
+======================================== */
 
 .kpi-value {
   margin-top: 10px;
@@ -80,7 +116,14 @@
   font-weight: 800;
 
   letter-spacing: -0.5px;
+
+  color: #252622;
 }
+
+
+/* ========================================
+   SUBTITLE
+======================================== */
 
 .kpi-subtitle {
   margin-top: 8px;
@@ -90,32 +133,67 @@
   color: #77776f;
 }
 
-/* Active alerts */
+
+/* ========================================
+   ACTIVE ALERTS
+======================================== */
 
 .kpi-card.alert {
   border-left: 3px solid #e7a900;
+
+  box-shadow:
+    6px 6px 12px rgba(163, 165, 158, 0.35),
+    -6px -6px 12px rgba(255, 255, 255, 0.88);
 }
 
 .kpi-card.alert .kpi-icon {
   background: #fff3cf;
 
   color: #a67500;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.25),
+    -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
-/* High risk */
+
+/* ========================================
+   HIGH RISK
+======================================== */
 
 .kpi-card.risk {
   border-left: 3px solid #df3c31;
 
-  background: #fffaf7;
+  background: #e8e9e3;
+
+  box-shadow:
+    6px 6px 12px rgba(163, 165, 158, 0.35),
+    -6px -6px 12px rgba(255, 255, 255, 0.88);
 }
 
 .kpi-card.risk .kpi-icon {
   background: #ffe6e2;
 
   color: #c42f27;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.25),
+    -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
 .kpi-card.risk .kpi-value {
   color: #c42f27;
+}
+
+
+/* ========================================
+   SOFT PRESSED FEEL
+======================================== */
+
+.kpi-card:active {
+  transform: translateY(1px);
+
+  box-shadow:
+    inset 4px 4px 8px rgba(163, 165, 158, 0.25),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
 }

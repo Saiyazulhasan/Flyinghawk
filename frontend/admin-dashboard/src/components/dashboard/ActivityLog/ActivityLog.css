@@ -1,27 +1,50 @@
+/* ========================================
+   ACTIVITY LOG — SOFT UI
+======================================== */
+
 .activity-card {
-  background: #fffef8;
+  background: #e8e9e3;
 
-  border: 1px solid #deded2;
+  border: none;
 
-  border-radius: 10px;
+  border-radius: 14px;
 
   height: 470px;
 
   overflow: hidden;
+
+  box-shadow:
+    7px 7px 14px rgba(163, 165, 158, 0.35),
+    -7px -7px 14px rgba(255, 255, 255, 0.88);
 }
+
+
+/* ========================================
+   HEADER
+======================================== */
 
 .activity-header {
   height: 64px;
 
   padding: 0 14px;
 
-  border-bottom: 1px solid #e4e4d9;
+  border-bottom: none;
 
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    0 4px 8px rgba(163, 165, 158, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.7);
+
+  position: relative;
+
+  z-index: 2;
 }
 
 .activity-header h2 {
@@ -30,6 +53,8 @@
   font-size: 14px;
 
   font-weight: 800;
+
+  color: #252622;
 }
 
 .activity-header p {
@@ -43,18 +68,50 @@
 .activity-header button {
   border: none;
 
-  background: transparent;
+  background: #e8e9e3;
 
   font-size: 9px;
 
   font-weight: 700;
 
   color: #55564f;
+
+  padding: 7px 9px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.25),
+    -3px -3px 6px rgba(255, 255, 255, 0.75);
+
+  transition: 0.2s;
 }
+
+.activity-header button:hover {
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 165, 158, 0.22),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.75);
+}
+
+
+/* ========================================
+   ACTIVITY LIST
+======================================== */
 
 .activity-list {
   padding: 4px 12px;
+
+  height: calc(100% - 64px);
+
+  overflow-y: auto;
 }
+
+
+/* ========================================
+   ACTIVITY ROW
+======================================== */
 
 .activity-row {
   display: flex;
@@ -63,8 +120,28 @@
 
   padding: 12px 2px;
 
-  border-bottom: 1px solid #eeeeE5;
+  border-bottom: 1px solid rgba(190, 192, 185, 0.35);
+
+  transition: 0.2s;
 }
+
+.activity-row:hover {
+  padding-left: 5px;
+  padding-right: 5px;
+
+  border-radius: 9px;
+
+  background: #e8e9e3;
+
+  box-shadow:
+    3px 3px 7px rgba(163, 165, 158, 0.25),
+    -3px -3px 7px rgba(255, 255, 255, 0.72);
+}
+
+
+/* ========================================
+   ACTIVITY ICON
+======================================== */
 
 .activity-icon {
   width: 30px;
@@ -72,13 +149,20 @@
 
   flex-shrink: 0;
 
-  border-radius: 8px;
+  border-radius: 9px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
+
+  box-shadow:
+    3px 3px 6px rgba(163, 165, 158, 0.25),
+    -3px -3px 6px rgba(255, 255, 255, 0.72);
 }
+
+
+/* Danger */
 
 .activity-icon.danger {
   background: #ffe5e1;
@@ -86,11 +170,17 @@
   color: #d33b31;
 }
 
+
+/* Sensor */
+
 .activity-icon.sensor {
   background: #fff4ca;
 
   color: #aa7e00;
 }
+
+
+/* Worker */
 
 .activity-icon.worker {
   background: #e8efff;
@@ -98,17 +188,28 @@
   color: #4164a7;
 }
 
+
+/* Success */
+
 .activity-icon.success {
   background: #e4f5df;
 
   color: #32803a;
 }
 
+
+/* Normal */
+
 .activity-icon.normal {
   background: #eeeeE7;
 
   color: #5d5e57;
 }
+
+
+/* ========================================
+   CONTENT
+======================================== */
 
 .activity-content {
   flex: 1;
@@ -129,6 +230,8 @@
 .activity-main strong {
   font-size: 10px;
 
+  color: #30312d;
+
   white-space: nowrap;
 
   overflow: hidden;
@@ -140,6 +243,8 @@
   font-size: 8px;
 
   color: #8a8a82;
+
+  flex-shrink: 0;
 }
 
 .activity-content p {
@@ -150,4 +255,23 @@
   color: #77776f;
 
   line-height: 1.4;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.activity-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: #c8cac2;
+
+  border-radius: 10px;
 }

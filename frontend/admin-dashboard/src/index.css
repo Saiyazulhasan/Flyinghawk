@@ -1,4 +1,6 @@
-
+/* ========================================
+   GLOBAL RESET
+======================================== */
 
 * {
   box-sizing: border-box;
@@ -8,10 +10,12 @@ html,
 body,
 #root {
   margin: 0;
-
-  min-height: 100%;
-
   width: 100%;
+  min-height: 100%;
+}
+
+html {
+  background: #e8e9e3;
 }
 
 body {
@@ -23,11 +27,87 @@ body {
 
   color: #22231f;
 
-  background: #f5f5ee;
+  background: #e8e9e3;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-/* =========================
-   LEAFLET MAP FIX
-========================= */
+
+
+/* ========================================
+   GLOBAL SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e9e3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9cbc3;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b7b9b1;
+}
+
+
+/* ========================================
+   COMMON NEUMORPHIC SURFACE
+======================================== */
+
+.neu-surface {
+  background: #e8e9e3;
+
+  box-shadow:
+    7px 7px 14px rgba(163, 165, 158, 0.45),
+    -7px -7px 14px rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.neu-inset {
+  background: #e8e9e3;
+
+  box-shadow:
+    inset 5px 5px 10px rgba(163, 165, 158, 0.35),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.85);
+}
+
+
+/* ========================================
+   BUTTON BASE
+======================================== */
+
+button {
+  font-family: inherit;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+
+/* ========================================
+   INPUT BASE
+======================================== */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* ========================================
+   LEAFLET MAP
+   DO NOT CHANGE TILE SIZING
+======================================== */
 
 .leaflet-container {
   width: 100% !important;
@@ -35,13 +115,19 @@ body {
 
   background: #d8d8d2;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .leaflet-container img {
   max-width: none !important;
   max-height: none !important;
 }
+
+
+/* Leaflet tiles */
 
 .leaflet-tile {
   width: 256px !important;
@@ -59,25 +145,8 @@ body {
   max-height: none !important;
 }
 
-.leaflet-control {
-  z-index: 800;
-}
 
-.leaflet-pane {
-  z-index: 400;
-}
-.leaflet-container {
-  width: 100% !important;
-  height: 100% !important;
-  background: #d8d8d2;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.leaflet-container img {
-  max-width: none !important;
-  max-height: none !important;
-}
-
+/* Leaflet controls */
 
 .leaflet-control {
   z-index: 800;
@@ -85,4 +154,44 @@ body {
 
 .leaflet-pane {
   z-index: 400;
+}
+
+
+/* ========================================
+   LEAFLET CONTROL NEUMORPHISM
+======================================== */
+
+.leaflet-control-zoom,
+.leaflet-control-layers {
+  border: none !important;
+
+  box-shadow:
+    4px 4px 8px rgba(80, 80, 75, 0.25),
+    -3px -3px 7px rgba(255, 255, 255, 0.75) !important;
+
+  border-radius: 8px !important;
+
+  overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+  border: none !important;
+
+  background: #e8e9e3 !important;
+
+  color: #34352f !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f0f1eb !important;
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+  background: #f0c400;
+  color: #22231f;
 }
