@@ -1,0 +1,12 @@
+.activity-item {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+}
+
+.activity-item span {
+  color: #888;
+  width: 60px;
+}

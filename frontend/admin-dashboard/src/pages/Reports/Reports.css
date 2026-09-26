@@ -1,0 +1,20 @@
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.report-grid button {
+  margin-top: 10px;
+
+  background: #ffe500;
+  border: none;
+
+  padding: 9px 12px;
+
+  border-radius: 6px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}

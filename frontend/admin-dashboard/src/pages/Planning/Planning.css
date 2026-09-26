@@ -1,0 +1,25 @@
+.simple-page {
+  padding: 10px;
+}
+
+.simple-page h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.simple-page > p {
+  color: #777;
+  font-size: 12px;
+}
+
+.page-card {
+  margin-top: 20px;
+  background: #fffef8;
+  border: 1px solid #deded2;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.page-card h3 {
+  margin: 0 0 8px;
+}

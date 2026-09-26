@@ -1,0 +1,17 @@
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-row p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: #777;
+}
+
+.settings-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ffe500;
+}

@@ -1,0 +1,333 @@
+.mine-map-card {
+  background: #fffef8;
+
+  border: 1px solid #deded2;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  height: 470px;
+
+  min-width: 0;
+}
+
+.mine-map-header {
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  border-bottom: 1px solid #e4e4d9;
+
+  background: #fffef8;
+}
+
+.mine-map-header h2 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.mine-map-header p {
+  margin: 4px 0 0;
+
+  font-size: 9px;
+
+  color: #77776f;
+}
+
+.map-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  background: #e4f5df;
+
+  color: #28762e;
+
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.map-status span {
+  width: 7px;
+  height: 7px;
+
+  background: #35a83c;
+
+  border-radius: 50%;
+}
+
+.map-container {
+  height: calc(100% - 64px);
+
+  position: relative;
+}
+
+.mine-map {
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+/* --------------------------------
+   CUSTOM MARKERS
+-------------------------------- */
+
+.custom-marker {
+  background: transparent;
+
+  border: none;
+}
+
+.sensor-marker {
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.sensor-marker span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+}
+
+.sensor-marker.normal {
+  background: #26a63b;
+}
+
+.sensor-marker.warning {
+  background: #e9ad00;
+}
+
+.sensor-marker.critical {
+  background: #e7382f;
+
+  box-shadow:
+    0 0 0 5px rgba(231, 56, 47, 0.22),
+    0 2px 9px rgba(0, 0, 0, 0.5);
+}
+
+.gateway-marker {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: #16202a;
+
+  color: white;
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.55);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+/* --------------------------------
+   LABELS
+-------------------------------- */
+
+.mine-label {
+  background: rgba(30, 30, 20, 0.78) !important;
+
+  color: #fff !important;
+
+  border: none !important;
+
+  border-radius: 4px !important;
+
+  padding: 4px 7px !important;
+
+  font-size: 8px !important;
+
+  font-weight: 800 !important;
+
+  box-shadow: none !important;
+}
+
+.panel-label {
+  background: rgba(20, 20, 20, 0.72) !important;
+
+  color: white !important;
+
+  border: none !important;
+
+  border-radius: 4px !important;
+
+  padding: 3px 6px !important;
+
+  font-size: 8px !important;
+
+  font-weight: 700 !important;
+
+  box-shadow: none !important;
+}
+
+.panel-label.high {
+  background: rgba(190, 35, 28, 0.88) !important;
+}
+
+/* --------------------------------
+   POPUP
+-------------------------------- */
+
+.sensor-popup {
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.sensor-popup hr {
+  border: none;
+
+  border-top: 1px solid #ddd;
+
+  margin: 5px 0;
+}
+
+/* --------------------------------
+   LEGEND
+-------------------------------- */
+
+.map-legend {
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  background: rgba(255, 255, 250, 0.95);
+
+  border: 1px solid #deded2;
+
+  border-radius: 8px;
+
+  padding: 9px 11px;
+
+  z-index: 500;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.12);
+
+  font-size: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.legend-title {
+  font-weight: 800;
+
+  font-size: 9px;
+
+  margin-bottom: 2px;
+}
+
+.map-legend > div:not(.legend-title) {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.legend-dot.sensor {
+  background: #26a63b;
+}
+
+.legend-dot.gateway {
+  background: #16202a;
+}
+
+.legend-dot.route {
+  background: #1685ff;
+
+  border-radius: 2px;
+}
+
+.legend-dot.high {
+  background: #e7382f;
+}
+
+.legend-dot.medium {
+  background: #e9ad00;
+}
+
+.legend-dot.low {
+  background: #48a653;
+}
+
+/* --------------------------------
+   LEAFLET CONTROLS
+-------------------------------- */
+
+.leaflet-control-layers {
+  border: none !important;
+
+  border-radius: 7px !important;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-control-layers-toggle {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.leaflet-control-zoom a {
+  color: #222 !important;
+
+  background: rgba(255, 255, 255, 0.95) !important;
+}

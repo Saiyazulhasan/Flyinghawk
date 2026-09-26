@@ -1,0 +1,42 @@
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+
+  border-left: 4px solid;
+}
+
+.alert-item p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 11px;
+}
+
+.alert-item span {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.high {
+  background: #fff0ed;
+  border-color: #ef3c2f;
+}
+
+.high span {
+  color: #d82d23;
+}
+
+.medium {
+  background: #fff9df;
+  border-color: #e7b900;
+}
+
+.medium span {
+  color: #a77d00;
+}

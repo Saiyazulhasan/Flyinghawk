@@ -1,0 +1,153 @@
+.activity-card {
+  background: #fffef8;
+
+  border: 1px solid #deded2;
+
+  border-radius: 10px;
+
+  height: 470px;
+
+  overflow: hidden;
+}
+
+.activity-header {
+  height: 64px;
+
+  padding: 0 14px;
+
+  border-bottom: 1px solid #e4e4d9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.activity-header h2 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.activity-header p {
+  margin: 4px 0 0;
+
+  font-size: 9px;
+
+  color: #77776f;
+}
+
+.activity-header button {
+  border: none;
+
+  background: transparent;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #55564f;
+}
+
+.activity-list {
+  padding: 4px 12px;
+}
+
+.activity-row {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 12px 2px;
+
+  border-bottom: 1px solid #eeeeE5;
+}
+
+.activity-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-icon.danger {
+  background: #ffe5e1;
+
+  color: #d33b31;
+}
+
+.activity-icon.sensor {
+  background: #fff4ca;
+
+  color: #aa7e00;
+}
+
+.activity-icon.worker {
+  background: #e8efff;
+
+  color: #4164a7;
+}
+
+.activity-icon.success {
+  background: #e4f5df;
+
+  color: #32803a;
+}
+
+.activity-icon.normal {
+  background: #eeeeE7;
+
+  color: #5d5e57;
+}
+
+.activity-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.activity-main {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.activity-main strong {
+  font-size: 10px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.activity-main span {
+  font-size: 8px;
+
+  color: #8a8a82;
+}
+
+.activity-content p {
+  margin: 4px 0 0;
+
+  font-size: 8px;
+
+  color: #77776f;
+
+  line-height: 1.4;
+}

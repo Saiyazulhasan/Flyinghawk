@@ -1,0 +1,12 @@
+.ai-card button {
+  background: #ffe500;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ai-card button:hover {
+  background: #f2d900;
+}

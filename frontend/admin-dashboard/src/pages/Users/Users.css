@@ -1,0 +1,18 @@
+.user-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+
+  padding: 14px 5px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 12px;
+}
+
+.user-row span {
+  color: #777;
+}
+
+.user-row b {
+  color: #2b8a35;
+}
